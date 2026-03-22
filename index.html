@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas para Madicita 🌻</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* Una fuente más moderna y suave */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Para que las flores no se salgan */
+            background-color: #fdfefe;
+        }
+
+        /* Fondo Animado de Flores Amarillas */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to bottom, #fef9e7, #fdfefe);
+        }
+
+        .flower {
+            position: absolute;
+            background-image: url('https://i.pinimg.com/736x/ec/64/0e/ec640e74b3d36009f4493393b4a20e28.jpg'); /* Imagen de flores amarillas */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float infinite linear;
+        }
+
+        /* Diferentes tamaños y velocidades para las flores */
+        .flower:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-duration: 15s; animation-delay: 0s; }
+        .flower:nth-child(2) { width: 60px; height: 60px; left: 30%; animation-duration: 18s; animation-delay: 2s; }
+        .flower:nth-child(3) { width: 90px; height: 90px; left: 50%; animation-duration: 20s; animation-delay: 4s; }
+        .flower:nth-child(4) { width: 70px; height: 70px; left: 70%; animation-duration: 16s; animation-delay: 1s; }
+        .flower:nth-child(5) { width: 100px; height: 100px; left: 85%; animation-duration: 22s; animation-delay: 3s; }
+        .flower:nth-child(6) { width: 50px; height: 50px; left: 20%; animation-duration: 14s; animation-delay: 5s; bottom: -100px; }
+        .flower:nth-child(7) { width: 75px; height: 75px; left: 60%; animation-duration: 19s; animation-delay: 2s; bottom: -120px; }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Contenedor del Mensaje */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85); /* Un poco más opaco para leer mejor */
+            padding: 50px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            max-width: 85%;
+            border: 3px solid #f9e79f;
+            position: relative; /* Para que el emoji flotante se posicione bien */
+        }
+
+        h1 {
+            color: #b7950b; /* Un dorado más suave */
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            font-family: 'Cormorant Garamond', serif; /* Una fuente elegante para el título */
+            font-weight: 700;
+        }
+
+        p {
+            color: #784212; /* Un marrón cálido */
+            font-size: 1.6em;
+            line-height: 1.7;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .heart-emoji {
+            font-size: 4em;
+            display: inline-block;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Un pequeño detalle final */
+        .footer {
+            font-size: 0.9em;
+            color: #a1887f;
+            margin-top: 20px;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+    </div>
+
+    <div class="container">
+        <h1>¡Para mi querida Madicita! 🌻</h1>
+        <p>
+            Madicita, hoy te regalo estas flores amarillas que nunca se marchitan. <br>
+            Son un símbolo de la alegría que traes a mi vida y de la luz que irradias. <br>
+            ¡Que tu día esté lleno de sonrisas y momentos hermosos, como tú! <br>
+            Gracias por ser una amiga tan increíble. Te quiero muchísimo. 💛
+        </p>
+        <div class="heart-emoji">💝</div>
+        <div class="footer">Un pequeño detalle con mucho cariño ✨</div>
+    </div>
+
+</body>
+</html>
